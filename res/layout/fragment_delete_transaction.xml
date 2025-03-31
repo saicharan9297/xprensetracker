@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".ui.bottom_sheet_dialogs.DeleteTransactionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_2sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        >
+
+        <!-- View for a decorative line or separator -->
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="@color/black"
+            android:layout_centerHorizontal="true"
+            />
+
+        <!-- Title for the delete transaction dialog -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:text="Delete Transaction"
+            android:textAlignment="center"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            />
+
+        <!-- Message text asking for confirmation -->
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:text="Are you sure you want to delete this transaction?"
+            android:textAlignment="center"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginVertical="@dimen/_10sdp"
+            />
+
+        <!-- Button to confirm deletion -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message"
+            android:backgroundTint="@color/purple_500"
+            android:background="@drawable/rounded_box"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="@color/white"
+            android:padding="@dimen/_7sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            />
+
+        <!-- Button to cancel the deletion -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deleteBtn"
+            android:backgroundTint="@color/purple_500"
+            android:background="@drawable/rounded_box"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="@color/white"
+            android:padding="@dimen/_7sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            />
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

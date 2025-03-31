@@ -1,0 +1,46 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BudgetTracker" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- Uncomment and customize below to set a different primary color -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:colorPrimary">@color/purple_500</item> <!-- Primary color -->
+        <item name="android:colorPrimaryDark">@color/purple_500</item> <!-- Dark variant of primary color -->
+        <item name="android:windowLightStatusBar">false</item> <!-- Status bar visibility -->
+        <item name="android:textColor">@color/black</item> <!-- Default text color -->
+    </style>
+
+    <!-- Application theme extending the base theme -->
+    <style name="Theme.BudgetTracker" parent="Base.Theme.BudgetTracker" />
+
+    <!-- Custom style for the Bottom Navigation View active indicator -->
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/black</item> <!-- Color for the active indicator -->
+    </style>
+
+    <!-- Style for Floating Action Button (FAB) -->
+    <style name="fab" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="cornerRadius">@dimen/_30sdp</item> <!-- Corner radius for FAB -->
+        <item name="android:layout_width">wrap_content</item> <!-- Width of the FAB -->
+        <item name="android:layout_height">wrap_content</item> <!-- Height of the FAB -->
+        <item name="maxImageSize">@dimen/_25sdp</item> <!-- Maximum image size within FAB -->
+        <item name="android:backgroundTint">@color/purple_500</item> <!-- Background tint color for FAB -->
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item> <!-- Bottom margin -->
+        <item name="android:layout_marginEnd">@dimen/_7sdp</item> <!-- End margin -->
+        <item name="android:tintMode">@color/white</item> <!-- Tint color for the image -->
+    </style>
+
+    <!-- Style for month buttons -->
+    <style name="monthButton" parent="Base.Theme.BudgetTracker">
+        <item name="android:backgroundTint">@color/purple_500</item> <!-- Background tint for month buttons -->
+        <item name="android:paddingHorizontal">@dimen/_12sdp</item> <!-- Horizontal padding -->
+        <item name="android:paddingVertical">@dimen/_3sdp</item> <!-- Vertical padding -->
+        <item name="android:layout_marginHorizontal">@dimen/_3sdp</item> <!-- Horizontal margin -->
+        <item name="android:layout_marginVertical">@dimen/_5sdp</item> <!-- Vertical margin -->
+        <item name="android:layout_height">@dimen/_37sdp</item> <!-- Height of the month button -->
+        <item name="android:layout_width">wrap_content</item> <!-- Width of the month button -->
+        <item name="android:fontFamily">@font/roboto_medium</item> <!-- Font family for the month button text -->
+        <item name="android:textColor">@color/white</item> <!-- Text color for month button -->
+        <item name="android:textSize">@dimen/_15sdp</item> <!-- Text size for month button -->
+    </style>
+</resources>

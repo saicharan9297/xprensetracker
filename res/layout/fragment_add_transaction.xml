@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTransactionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_2sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/rounded_box"
+            android:backgroundTint="@color/black"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/cr_dr_liner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_below="@+id/view">
+
+            <!-- Credit Button -->
+            <LinearLayout
+                android:id="@+id/creditBtn"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:background="@drawable/rounded_box"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/creditImageBtn"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:background="@drawable/circle"
+                    android:contentDescription="check Credit"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:text="Credit"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <!-- Debit Button -->
+            <LinearLayout
+                android:id="@+id/debitBtn"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:background="@drawable/rounded_box"
+                android:backgroundTint="@color/red"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/debitImageBtn"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:background="@drawable/circle"
+                    android:contentDescription="check Debit"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:text="Debit"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Transaction Title -->
+        <EditText
+            android:id="@+id/edtAddTransTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_below="@+id/cr_dr_liner_layout"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/rounded_box"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Title"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black_80"/>
+
+        <!-- Transaction Category -->
+        <EditText
+            android:id="@+id/edtAddTransCategory"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_below="@+id/edtAddTransTitle"
+            android:background="@drawable/rounded_box"
+            android:focusable="false"
+            android:hint="Category"
+            android:fontFamily="@font/roboto_medium"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black_80"/>
+
+        <!-- Transaction Amount -->
+        <EditText
+            android:id="@+id/edtAddTransAmount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_below="@+id/edtAddTransCategory"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/rounded_box"
+            android:hint="Amount"
+            android:fontFamily="@font/roboto_medium"
+            android:textColorHint="@color/black_80"
+            android:inputType="number"
+            android:textColor="@color/black"/>
+
+        <!-- Add Transaction Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addTransactionBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtAddTransAmount"
+            android:backgroundTint="@color/purple_500"
+            android:background="@drawable/rounded_box"
+            android:layout_marginHorizontal="@dimen/_50sdp"
+            android:textColor="@color/white"
+            android:text="Add Transaction"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_15ssp"
+            android:textAllCaps="false"/>
+    </RelativeLayout>
+</FrameLayout>

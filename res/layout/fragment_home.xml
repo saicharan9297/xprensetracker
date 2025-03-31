@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Top LinearLayout to display available balance -->
+        <LinearLayout
+            android:id="@+id/top_linear_layout_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_135sdp"
+            android:background="@drawable/bottom_rounded_box"
+            android:backgroundTint="@color/purple_500"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- TextView for displaying available balance title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/avail_balance"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp" />
+
+            <!-- Horizontal LinearLayout for rupee symbol and balance value -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- TextView for rupee symbol -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    android:text="@string/rupees_symbol"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_28ssp" />
+
+                <!-- TextView to display available balance value -->
+                <TextView
+                    android:id="@+id/TxtAvailableBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_28ssp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- TextView for displaying a message when no transactions are found -->
+        <TextView
+            android:id="@+id/emptyTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_linear_layout_box"
+            android:text="No Transaction Found"
+            android:textSize="@dimen/_18ssp"
+            android:textAlignment="center"
+            android:visibility="gone"
+            />
+
+        <!-- RecyclerView for displaying transactions -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_linear_layout_box"
+            android:visibility="gone"
+            />
+
+        <!-- Floating Action Button for adding a new transaction -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/addTransactionFab"
+            style="@style/fab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/add_transaction_fab_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/baseline_add_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
